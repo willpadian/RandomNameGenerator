@@ -1,0 +1,15 @@
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/bin/Debug/net5.0/RandomNameGenerator.deps.json
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/bin/Debug/net5.0/RandomNameGenerator.runtimeconfig.json
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/bin/Debug/net5.0/RandomNameGenerator.runtimeconfig.dev.json
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/bin/Debug/net5.0/RandomNameGenerator.dll
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/bin/Debug/net5.0/ref/RandomNameGenerator.dll
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/bin/Debug/net5.0/RandomNameGenerator.pdb
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/obj/Debug/net5.0/RandomNameGenerator.csproj.AssemblyReference.cache
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/obj/Debug/net5.0/RandomNameGenerator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/obj/Debug/net5.0/RandomNameGenerator.AssemblyInfoInputs.cache
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/obj/Debug/net5.0/RandomNameGenerator.AssemblyInfo.cs
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/obj/Debug/net5.0/RandomNameGenerator.csproj.CoreCompileInputs.cache
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/obj/Debug/net5.0/RandomNameGenerator.dll
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/obj/Debug/net5.0/ref/RandomNameGenerator.dll
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/obj/Debug/net5.0/RandomNameGenerator.pdb
+/Users/willpadian/Documents/GitHub/RandomNameGenerator/obj/Debug/net5.0/RandomNameGenerator.genruntimeconfig.cache
