@@ -20,15 +20,21 @@ At a high level the game works as follows:
 6.If more names need to be generated, go to step 5
 7.Otherwise, the program exits
 
+![HighLevelFlowChart](HighLevelFlowChart.png)
+
 ### Flowchart
 
 ## Methods
 
-int GetPositiveInt(string prompt);
+### int GetPositiveInt(string prompt);
+
+![GetPositiveInt](GetPositiveInt.png)
 
 This int method is used in order to differentiate between positive and negative numbers. If the number is negative, then there will be an error output by the program. This is because the program needs to be prompted by a positive number in order to know the amount of names that the user wants to generate.
 
-string GenerateRandomName(List<string> firstNames, List<string> midNames);
+### string GenerateRandomName(List<string> firstNames, List<string> midNames);
+
+![stringGenerateRandomNames](stringGenerateRandomNames.png)
 
 This string is what actually randomly chooses the names that are necessary for the program to output in order for the program to be running properly. The string is what specifically randomized the output names for the program.
 
