@@ -17,7 +17,7 @@ namespace RandomNameGenerator
             List<string> testFirstNames = new List<string>();
 
             // 2. Add a single first name to the list
-            testFirstNames.Add("Jenkins");
+            testFirstNames.Add("Jamie");
 
             // 3. Create a list of last names to test with:
             List<string> testLastNames = new List<string>();
@@ -47,7 +47,7 @@ namespace RandomNameGenerator
             // TODO(jcollard 2022-02-03): Here are a few more tests you should write:
             // 1. A list with 1 first name and many last names (check that the string StartsWith the first name).
 
-            testResult.StartsWith("Jenkins");
+            testResult.StartsWith("Jamie");
 
             // 2. A list with many first names and only 1 last name (check the string EndsWith the last name).
 

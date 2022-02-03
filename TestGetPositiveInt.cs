@@ -7,24 +7,24 @@ namespace RandomNameGenerator
     {
         public static bool RunTest()
         {
-            int result = Program.GetPositiveInt("17");
-            if (result != 17)
-            {
-                Console.Error.WriteLine("The first file should have been 17");
-                return false;
-            }
+            // int result = Program.GetPositiveInt("17");
+            // if (result != 17)
+            // {
+            //     Console.Error.WriteLine("The first file should have been 17");
+            //     return false;
+            // }
 
-            int result2 = Program.GetPositiveInt("-5");
-            Console.Error.WriteLine("You must enter a positive integer");
-            return false;
+            // int result2 = Program.GetPositiveInt("-5");
+            // Console.Error.WriteLine("You must enter a positive integer");
+            // return false;
 
-            int result3 = Program.GetPositiveInt("7.6");
-            Console.Error.WriteLine("You must enter a positive integer");
-            return false;
+            // int result3 = Program.GetPositiveInt("7.6");
+            // Console.Error.WriteLine("You must enter a positive integer");
+            // return false;
 
-            int result4 = Program.GetPositiveInt("0");
-            Console.Error.WriteLine("You must enter a positive integer");
-            return null;
+            // int result4 = Program.GetPositiveInt("0");
+            // Console.Error.WriteLine("You must enter a positive integer");
+            // return null;
 
 
             // TODO(jcollard 2022-02-03): You should write instructions for the user testing this method.
@@ -60,10 +60,34 @@ namespace RandomNameGenerator
             // TODO(jcollard 2022-02-03): Write at least 2 more tests following the steps above.
             // What are some more invalid and valid inputs the user can try?
 
+            Console.WriteLine("When it runs, you should see the prompt 'What is your age?'");
+            Console.WriteLine("1. Enter '0.9'. This is an invalid input. You should see 'Invalid'.");
+            Console.WriteLine("2. Enter '0'. This is an invalid input. You should see 'Invalid'.");
+            Console.WriteLine("3. Enter '+'. This is an invalid input. You should see 'Invalid'.");
+            Console.WriteLine("4. Enter '27'. This is a valid input.");
+
+
+            result = Program.GetPositiveInt("What is your age?");
+            if (result != 27)
+            {
+                Console.Error.WriteLine($"The result should have been 27S but was {result}");
+                return false;
+            }
             
+            Console.WriteLine("When it runs, you should see the prompt 'What is your age?'");
+            Console.WriteLine("1. Enter '238.373'. This is an invalid input. You should see 'Invalid'.");
+            Console.WriteLine("2. Enter '&&&'. This is an invalid input. You should see 'Invalid'.");
+            Console.WriteLine("3. Enter '[]odm'. This is an invalid input. You should see 'Invalid'.");
+            Console.WriteLine("4. Enter '19'. This is a valid input.");
+
+            if (result != 19)
+            {
+                Console.Error.WriteLine($"The result should have been 19 but was {result}");
+                return false;
+            }
 
             // TODO(jcollard 2022-02-03): Finally, if all of the results are as expected, return true (pass)
-            return false;
+            return true;
         }
     }
 }
