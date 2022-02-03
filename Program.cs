@@ -8,7 +8,21 @@ namespace RandomNameGenerator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Checks if the user added a command line argument
+            // Also checks if the first argument is "test"
+            if (args.Length > 0 && args[0] == "test")
+            {
+                TestAll();
+                return; // Exits the program
+            }
+        }
+        public static void TestAll()
+        {
+            bool testGenerateRandomName = TestGenerateRandomName.RunTest();
+            Console.WriteLine($"Test GenerateRandomName(filename): {testGenerateRandomName}");
+
+            bool testGetPositiveInt = TestGetPositiveInt.RunTest();
+            Console.WriteLine($"Test GetPositiveInt(filename): {testGetPositiveInt}");
         }
 
         /// <summary>
