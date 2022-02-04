@@ -29,9 +29,9 @@ namespace RandomNameGenerator
 
             string testResult = Program.GenerateRandomName(testFirstNames, testLastNames);
 
-            // 6. Since we have only 1 name in each list, the name generated should be "Jenkins the Baller"
+            // 6. Since we have only 1 name in each list, the name generated should be "Jamie the Baller"
 
-            string expected = "Jenkins the Baller";
+            string expected = "Jamie the Baller";
 
             // 7. Check if the testResult is not equal to the expected result
 
@@ -46,12 +46,27 @@ namespace RandomNameGenerator
 
             // TODO(jcollard 2022-02-03): Here are a few more tests you should write:
             // 1. A list with 1 first name and many last names (check that the string StartsWith the first name).
+            // clear our lists for a new test case
+            testFirstNames.Clear();
+            testLastNames.Clear();
 
-            testResult.StartsWith("Jamie");
+            // add one first name to testFirstNames
+            testFirstNames.Add("Robbie");
+
+            // add a bunch of lastNames to testLastName
+            testLastNames.Add("Bjerre");
+            testLastNames.Add("Wren");
+            testLastNames.Add("Setty");
+            testLastNames.Add("Amiri");
+            testLastNames.Add("Padian");
+
 
             // 2. A list with many first names and only 1 last name (check the string EndsWith the last name).
+            testFirstNames.Add("Robbie");
 
-            testResult.EndsWith("the Baller");
+
+
+            testLastNames.Add("Padian");
 
             
             // If all of the check are as expected, return true.
