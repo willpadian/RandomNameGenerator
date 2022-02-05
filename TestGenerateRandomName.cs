@@ -14,20 +14,23 @@ namespace RandomNameGenerator
 
             // 1. Start by creating a list of first names to test with:
 
-            List<string> testFirstNames = new List<string>();
+            List<string> testFirstNames;
+            testFirstNames = new List<string>();
 
             // 2. Add a single first name to the list
             testFirstNames.Add("Jamie");
 
             // 3. Create a list of last names to test with:
-            List<string> testLastNames = new List<string>();
+            List<string> testLastNames;
+            testLastNames = new List<string>();
             
             // 4. Add a single last name to the list
             testLastNames.Add("the Baller");
 
             // 5. Next, call the GenerateRandomName with the test lists:
 
-            string testResult = Program.GenerateRandomName(testFirstNames, testLastNames);
+            string testResult;
+            testResult = Program.GenerateRandomName(testFirstNames, testLastNames);
 
             // 6. Since we have only 1 name in each list, the name generated should be "Jamie the Baller"
 
@@ -56,21 +59,59 @@ namespace RandomNameGenerator
             // add a bunch of lastNames to testLastName
             testLastNames.Add("Bjerre");
             testLastNames.Add("Wren");
-            testLastNames.Add("Setty");
-            testLastNames.Add("Amiri");
-            testLastNames.Add("Padian");
 
+            testResult = Program.GenerateRandomName(testFirstNames, testLastNames);
 
-            // 2. A list with many first names and only 1 last name (check the string EndsWith the last name).
+            string outcome0;
+            string outcome1;
+
+            outcome0 = "Robbie Bjerre";
+            outcome1 = "Robbie Wren";
+
+            if (testResult != outcome0 || testResult != outcome1)
+            {
+                Console.Error.WriteLine($"Failure: Expected {outcome0} or {outcome1} but the result was {testResult}.");
+                return false;
+            }
+
+            testFirstNames.Clear();
+            testLastNames.Clear();
+
+            // add one first name to testFirstNames
             testFirstNames.Add("Robbie");
+            testFirstNames.Add("Becket");
 
-
-
-            testLastNames.Add("Padian");
-
+            // add one lastName to testLastName
+            testLastNames.Add("Bjerre");
             
+
+            testResult = Program.GenerateRandomName(testFirstNames, testLastNames);
+
+            string outcome2;
+            string outcome3;
+
+            outcome2 = "Robbie Bjerre";
+            outcome3 = "Becket Bjerre";
+
+            if (testResult != outcome2 || testResult != outcome3)
+            {
+                Console.Error.WriteLine($"Failure: Expected {outcome2} or {outcome3} but the result was {testResult}.");
+                return false;
+            }
+
+            testFirstNames.Clear();
+            testLastNames.Clear();
+            testResult = Program.GenerateRandomName(testFirstNames, testLastNames);
+            expected = "Will Padian";
+
+            if (testResult != expected)
+            {
+                Console.Error.WriteLine($"Failure: Expected {expected} but the result was {testResult}.");
+                return false;
+            }
+
             // If all of the check are as expected, return true.
-            return false;
+            return true;
         }
     }
 }
