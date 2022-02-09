@@ -32,14 +32,30 @@ namespace RandomNameGenerator
         /// <returns>the number the player chose</returns>
         public static int GetPositiveInt(string prompt)
         {
+            int userChoice;
             // 1.Validate the prompt is a string
-            // 2.Display the prompt
-            // 3.Read input from the user
-            // 4.If the user entered a non-positive number,
-            // 5.Display an error message
+            do
+            {
+                // 2.Display the prompt
+                Console.Write("Enter a number that is greater than 0:");
+                // 3.Read input from the user
+                string input = Console.ReadLine();
+                bool isANumber = int.TryParse(input, out userChoice);
+                // 4.If the user entered a non-positive number,
+                if (isANumber == false)
+                {
+                    // 5.Display an error message
+                    Console.Error.WriteLine("You did not enter a number.");
+                }
+                else if (userChoice <= 0)
+                {
+                    Console.WriteLine("That number is not greater than 0.");
+                }
+            }
             // 6.Go to step 2
+            while (userChoice <= 0);
             // 7.Otherwise, return the users input
-            return -1;
+            return userChoice;
         }
 
         /// <summary>
@@ -48,16 +64,22 @@ namespace RandomNameGenerator
         /// <param name="first">the list of first names</param>
         /// <param name="last">the list of last names</param>
         /// <returns>a random first and random last name combined into a single name</returns>
-        public static string GenerateRandomName(List<string> first, List<string> last)
+
+
+
+        public static string GenerateRandomName(List<string> firstNames, List<string> lastNames)
         {
             //Create a random number generator
+            Random generator = new Random();
             //Generate a random number, firstIndex, between 0 and firstNames.Count
-            //Generate a random number, midIndex, between 0 and midNames.Count
+            int firstIndex = generator.Next(0, firstNames.Count);
             //Generate a random number, lastIndex, between 0 and lastNames.Count
+            int secondIndex = generator.Next(0, lastNames.Count);
             //Combine the names together
+            string randomName = firstNames[firstIndex] + " " + lastNames[secondIndex];
             //firstNames[firstIndex] + " " + midNames[midIndex] + " " + lastNames[lastIndex];
             //Return the name
-            return "Jamie the Baller";
+            return randomName;
         }
 
     }
