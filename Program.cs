@@ -19,9 +19,34 @@ namespace RandomNameGenerator
             // TODO(jcollard 2022-02-10):
             // You're almost done!
             // 1. Create a list containing all of the first names
+            List<string> testFirstNames;
+            testFirstNames = new List<string>();
+            testFirstNames.Add("Robbie");
+            testFirstNames.Add("Becket");
+            testFirstNames.Add("Jamie");
+            testFirstNames.Add("Will");
+            testFirstNames.Add("Kory");
+            testFirstNames.Add("Evan");
             // 2. Create a list contianing all of the last names
+            List<string> testLastNames;
+            testLastNames = new List<string>();
+            testLastNames.Add("Bjerre");
+            testLastNames.Add("Wren");
+            testLastNames.Add("Padian");
+            testLastNames.Add("Tall");
+            testLastNames.Add("the Baller");
+            testLastNames.Add("Jackson");
             // 3. Ask the user how many names they would like to generate (GetPositiveInt("How many names?"))
+            int NumberOfNames;
+            NumberOfNames = GetPositiveInt("How many names?");
             // 4. Write a while loop that calls GenerateRandom name that many times
+            while(NumberOfNames > 0)
+            {
+                string randomName;
+                randomName = GenerateRandomName(testFirstNames, testLastNames);
+                Console.WriteLine(randomName);
+                NumberOfNames = NumberOfNames - 1;
+            }
 
         }
         public static void TestAll()
@@ -44,6 +69,7 @@ namespace RandomNameGenerator
             if (prompt == null)
             {
                 // If prompt is null, we should throw an exception
+                throw new Exception("Prompt is null");
             }
             int userChoice;
             // 1.Validate the prompt is a string

@@ -68,7 +68,7 @@ namespace RandomNameGenerator
             outcome0 = "Robbie Bjerre";
             outcome1 = "Robbie Wren";
 
-            if (testResult != outcome0 || testResult != outcome1) // TODO(jcollard 2022-02-10): Switch this from `||` to `&&`
+            if (testResult != outcome0 && testResult != outcome1) // TODO(jcollard 2022-02-10): Switch this from `||` to `&&`
             {
                 Console.Error.WriteLine($"Failure: Expected {outcome0} or {outcome1} but the result was {testResult}.");
                 return false;
@@ -93,7 +93,7 @@ namespace RandomNameGenerator
             outcome2 = "Robbie Bjerre";
             outcome3 = "Becket Bjerre";
 
-            if (testResult != outcome2 || testResult != outcome3) // TODO(jcollard 2022-02-10): Switch this from `||` to `&&`
+            if (testResult != outcome2 && testResult != outcome3) // TODO(jcollard 2022-02-10): Switch this from `||` to `&&`
             {
                 Console.Error.WriteLine($"Failure: Expected {outcome2} or {outcome3} but the result was {testResult}.");
                 return false;

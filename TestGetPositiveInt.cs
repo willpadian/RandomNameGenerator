@@ -81,6 +81,8 @@ namespace RandomNameGenerator
             Console.WriteLine("4. Enter '19'. This is a valid input.");
             
             // TODO(jcollard 2022-02-10): Don't forget to call your method here
+            result = Program.GetPositiveInt("What is your age?");
+
 
             if (result != 19)
             {
