@@ -15,6 +15,14 @@ namespace RandomNameGenerator
                 TestAll();
                 return; // Exits the program
             }
+
+            // TODO(jcollard 2022-02-10):
+            // You're almost done!
+            // 1. Create a list containing all of the first names
+            // 2. Create a list contianing all of the last names
+            // 3. Ask the user how many names they would like to generate (GetPositiveInt("How many names?"))
+            // 4. Write a while loop that calls GenerateRandom name that many times
+
         }
         public static void TestAll()
         {
@@ -32,6 +40,11 @@ namespace RandomNameGenerator
         /// <returns>the number the player chose</returns>
         public static int GetPositiveInt(string prompt)
         {
+            // TODO(jcollard 2022-02-10): Check that prompt is not null:
+            if (prompt == null)
+            {
+                // If prompt is null, we should throw an exception
+            }
             int userChoice;
             // 1.Validate the prompt is a string
             do
