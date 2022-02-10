@@ -79,6 +79,8 @@ namespace RandomNameGenerator
             Console.WriteLine("2. Enter '&&&'. This is an invalid input. You should see 'Invalid'.");
             Console.WriteLine("3. Enter '[]odm'. This is an invalid input. You should see 'Invalid'.");
             Console.WriteLine("4. Enter '19'. This is a valid input.");
+            
+            // TODO(jcollard 2022-02-10): Don't forget to call your method here
 
             if (result != 19)
             {
