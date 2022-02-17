@@ -123,7 +123,7 @@ Given a list of first and last names, generate a random name using one entry fro
 
 Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it.
 
-**TODO: In English, explain step by step what your procedure does. Be sure to use the word `Selection` and `Iteration` to explain what it does.**
+The variable generateRandomName uses selection in order to select which name to randomly generate.
 
 ## 3d
 
